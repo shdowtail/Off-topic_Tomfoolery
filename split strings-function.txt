@@ -1,0 +1,22 @@
+ The code starts by declaring a string and then declares an array of pointers to strings.
+
+ The code starts by analyzing the string "To be, or not to be, that is the question."
+ which has 8 characters in it.
+
+ It then goes through each character in the string one at a time and checks if there is any separator between them.
+
+ If so, it increments i and continues on until i reaches len-1 (the length of the string).
+
+ Then it allocates memory for an array of pointers to strings using malloc() with count as its size parameter.
+
+ The next part of the code iterates over all possible combinations of separators found within "To be, or not to be,"
+  checking if they are equal to NULL (a null pointer) or not equal to NULL (not a null pointer).
+
+ If they are equal to NULL then break out from this loop because we have reached our end point;
+ otherwise continue on until
+ we reach our end point again where *count will now contain 1 more than what was originally stored inside
+ split_strings[] since there was one less combination checked before this loop started executing.
+
+ The code has the following functions: int main () char s[] = "To be, or not to be, that is the question.
+ "; int count_strings = 0; char **split_strings = split (s, " ,.
+ ", &count_strings); for (int i = 0; i < count_strings; i++) { printf ("\n%s", split_strings[i]); }

@@ -29,7 +29,7 @@ int main ()
 
 char **split (char *string, char *separators, int *count)
 {
-  // get the length of the string
+
   int len = (int)strlen (string);
 
   *count = 0;
@@ -40,8 +40,6 @@ char **split (char *string, char *separators, int *count)
   {
 	while (i < len)
 	{
-	  // keep incrementing i until the character at index i is NOT found in the
-	  // separators array, indicating we've reached the next substring to create
 	  if (strchr (separators, string[i]) == NULL)
 		break;
 	  i++;
@@ -91,11 +89,8 @@ char **split (char *string, char *separators, int *count)
 
 	  strings[string_index] = malloc (to_allocate);
 
-	  // copy the buffer into this dynamically allocated space
 	  strcpy (strings[string_index], buffer);
 
-	  // advance string_index so we store the next string at the next index in
-	  // the strings array
 	  string_index++;
 	}
   }
